@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A9410B63-1C07-441A-872A-2A5637148C26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BBK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2C8704914E423966DD583AE364124A986159C11F</key>
+		<string>github.com:greenorangeSeven/BBK.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BBK.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2C8704914E423966DD583AE364124A986159C11F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:greenorangeSeven/BBK.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2C8704914E423966DD583AE364124A986159C11F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C8704914E423966DD583AE364124A986159C11F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BBK</string>
+		</dict>
+	</array>
+</dict>
+</plist>
