@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyOrderView">
+            <connections>
+                <outlet property="item1Btn" destination="RZC-Uf-q3d" id="4AE-YY-djb"/>
+                <outlet property="item2Btn" destination="D1n-IC-qf4" id="8Dx-n7-UEf"/>
+                <outlet property="item3btn" destination="RXu-gM-NEs" id="ctr-4c-XjE"/>
+                <outlet property="tableView" destination="2Pc-PV-fmM" id="6qR-CQ-EBP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPo-6i-96t">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-V5-2g9">
+                            <rect key="frame" x="0.0" y="39" width="320" height="1"/>
+                            <color key="backgroundColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZC-Uf-q3d">
+                            <rect key="frame" x="0.0" y="0.0" width="106" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="全部" backgroundImage="activity_tab_bg">
+                                <color key="titleColor" red="0.92549019610000005" green="0.46666666670000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="item1Action:" destination="-1" eventType="touchUpInside" id="4AK-gF-nne"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1n-IC-qf4">
+                            <rect key="frame" x="107" y="0.0" width="106" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="待支付">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="item2Action:" destination="-1" eventType="touchUpInside" id="JTw-hs-3Gx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXu-gM-NEs">
+                            <rect key="frame" x="214" y="0.0" width="106" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="已支付">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="item3Action:" destination="-1" eventType="touchUpInside" id="zt3-O9-gfz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="AZe-wc-A5u"/>
+                        <constraint firstAttribute="width" constant="320" id="ua0-UM-JYQ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Pc-PV-fmM">
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Pc-PV-fmM" firstAttribute="top" secondItem="ZPo-6i-96t" secondAttribute="bottom" id="DAT-1R-jc4"/>
+                <constraint firstItem="2Pc-PV-fmM" firstAttribute="top" secondItem="ZPo-6i-96t" secondAttribute="bottom" id="JMV-ab-6vB"/>
+                <constraint firstAttribute="trailing" secondItem="2Pc-PV-fmM" secondAttribute="trailing" id="JOv-uz-M4m"/>
+                <constraint firstAttribute="bottom" secondItem="2Pc-PV-fmM" secondAttribute="bottom" id="l0B-7j-tZb"/>
+                <constraint firstItem="2Pc-PV-fmM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ohB-Ni-E55"/>
+                <constraint firstItem="ZPo-6i-96t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pfB-b1-cQV"/>
+                <constraint firstItem="ZPo-6i-96t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tRx-Fd-oqt"/>
+                <constraint firstAttribute="trailing" secondItem="ZPo-6i-96t" secondAttribute="trailing" id="toJ-lh-qZc"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-156" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="activity_tab_bg" width="15" height="40"/>
+    </resources>
+</document>
