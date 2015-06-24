@@ -76,6 +76,7 @@
         
         self.dateTimePicker = [[UIDatePicker alloc] init];
         self.dateTimePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        [self.dateTimePicker setMinimumDate:[NSDate date]];
         [self.dateTimePicker addTarget:self
                                 action:@selector(dateChanged:)
                       forControlEvents:UIControlEventValueChanged];
@@ -99,6 +100,7 @@
         [actionSheet showInView:[UIApplication sharedApplication].keyWindow];
         self.dateTimePicker = [[UIDatePicker alloc] init];
         self.dateTimePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        [self.dateTimePicker setMinimumDate:[NSDate date]];
         [self.dateTimePicker addTarget:self
                                 action:@selector(dateChanged:)
                       forControlEvents:UIControlEventValueChanged];

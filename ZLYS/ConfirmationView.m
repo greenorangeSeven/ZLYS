@@ -155,7 +155,20 @@
     [super didReceiveMemoryWarning];
 }
 
+/**
+ *线上支付
+ *
+ */
 - (IBAction)doOrder:(id)sender
+{
+    [self createOrderJson:1];
+}
+
+- (IBAction)doOfflineAction:(id)sender {
+    [self createOrderJson:2];
+}
+
+- (void)createOrderJson:(int) payType
 {
     NSString *nameStr = self.recipientsTf.text;
     NSString *telStr = self.telphoneTf.text;
@@ -181,10 +194,11 @@
     OderSubmitVO *submitVO = [[OderSubmitVO alloc] init];
     submitVO.regUserId = userInfo.regUserId;
     if(ramarkStr.length > 0)
-       submitVO.remark = ramarkStr;
+        submitVO.remark = ramarkStr;
     submitVO.receivingUserName = nameStr;
     submitVO.receivingAddress = addressStr;
     submitVO.phone = telStr;
+    submitVO.payType = payType;
     
     submitVO.shopList = [[NSMutableArray alloc] initWithCapacity:self.commodityItems.count];
     NSMutableDictionary *shopDic = [[NSMutableDictionary alloc] init];

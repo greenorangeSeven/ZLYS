@@ -32,5 +32,7 @@
 - (IBAction)releasepermitActon:(id)sender;
 //我的订单
 - (IBAction)myOrderAction:(id)sender;
+//修改信息
+- (IBAction)changeUserInfoAction:(id)sender;
 
 @end

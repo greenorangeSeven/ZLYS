@@ -12,6 +12,7 @@
 #import "CommDetailView.h"
 #import "SDImageCache.h"
 #import "XGPush.h"
+#import "ModifyUserInfoView.h"
 
 @interface SettingPageView ()
 {
@@ -189,6 +190,13 @@
     [[SDImageCache sharedImageCache] clearDisk];
     NSString *clearCacheName = tmpSize >= 1 ? [NSString stringWithFormat:@"清理缓存(%.2fM)",tmpSize] : [NSString stringWithFormat:@"清理缓存(%.2fK)",tmpSize * 1024];
     [Tool showCustomHUD:clearCacheName andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:2];
+}
+
+- (IBAction)changeUserInfoAction:(id)sender {
+    ModifyUserInfoView *modifyView = [[ModifyUserInfoView alloc] init];
+    modifyView.parentView = self.view;
+    modifyView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:modifyView animated:YES];
 }
 
 //版本更新

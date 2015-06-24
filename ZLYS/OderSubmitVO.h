@@ -39,6 +39,11 @@
 @property (copy, nonatomic) NSString *phone;
 
 /**
+ * 支付方式
+ */
+@property int payType;
+
+/**
  * 订单商家列表
  */
 @property (strong, nonatomic) NSMutableArray *shopList;

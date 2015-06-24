@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *commodityTable;
 @property (weak, nonatomic) IBOutlet UIView *subTotalView;
 @property (weak, nonatomic) IBOutlet UILabel *subTotalLb;
+@property (weak, nonatomic) IBOutlet UILabel *payTypeName;
 
 - (void)loadShopCommoditys:(MyOrder *)order andRow:(int)indexRow;
 

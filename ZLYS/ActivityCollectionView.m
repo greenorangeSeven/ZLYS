@@ -196,9 +196,11 @@
             //如果有网络连接
             if ([UserModel Instance].isNetworkRunning) {
                 //查询当前有效的活动列表
+                UserInfo *userInfo = [[UserModel Instance] getUserInfo];
                 NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
                 [param setValue:activity.activityId forKey:@"activityId"];
-                NSString *praiseActivityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_addActivityHeart] params:param];
+                [param setValue:userInfo.regUserId forKey:@"regUserId"];
+                NSString *praiseActivityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_addCancelInHeart] params:param];
                 [[AFOSCClient sharedClient]getPath:praiseActivityUrl parameters:Nil
                                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                @try {
@@ -207,16 +209,12 @@
                                                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                                    
                                                    NSString *state = [[json objectForKey:@"header"] objectForKey:@"state"];
-                                                   if ([state isEqualToString:@"0000"] == NO) {
-                                                       UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"错误提示"
-                                                                                                    message:[[json objectForKey:@"header"] objectForKey:@"msg"]
-                                                                                                   delegate:nil
-                                                                                          cancelButtonTitle:@"确定"
-                                                                                          otherButtonTitles:nil];
-                                                       [av show];
-//                                                       return;
+                                                   if ([state isEqualToString:@"0004"] == YES) {
+                                                       [Tool showCustomHUD:@"已取消点赞" andView:self.view andImage:@"37x-Failure.png" andAfterDelay:2];
+                                                       activity.heartCount -= 1;
+                                                       [self.activityCollection reloadData];
                                                    }
-                                                   else
+                                                   else if ([state isEqualToString:@"0005"] == YES)
                                                    {
                                                        [Tool showCustomHUD:@"点赞成功" andView:self.view andImage:@"37x-Failure.png" andAfterDelay:2];
                                                        activity.heartCount += 1;

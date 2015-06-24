@@ -135,6 +135,9 @@
     [self.navigationController pushViewController:myOrder animated:YES];
 }
 
+- (IBAction)changeUserInfoAction:(id)sender {
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

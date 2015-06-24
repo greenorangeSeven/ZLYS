@@ -18,6 +18,7 @@
 #import "AppDelegate.h"
 #import "XGPush.h"
 #import "VisitorView.h"
+#import "MainPageNewView.h"
 
 @interface LoginView ()
 {
@@ -259,10 +260,14 @@
 -(void)gotoTabbar
 {
     //物业
-    PropertyPageView *propertyPage = [[PropertyPageView alloc] initWithNibName:@"PropertyPageView" bundle:nil];
-    propertyPage.tabBarItem.image = [UIImage imageNamed:@"tab_pro"];
-    propertyPage.tabBarItem.title = @"物业";
-    UINavigationController *propertyPageNav = [[UINavigationController alloc] initWithRootViewController:propertyPage];
+//    PropertyPageView *propertyPage = [[PropertyPageView alloc] initWithNibName:@"PropertyPageView" bundle:nil];
+//    propertyPage.tabBarItem.image = [UIImage imageNamed:@"tab_pro"];
+//    propertyPage.tabBarItem.title = @"物业";
+//    UINavigationController *propertyPageNav = [[UINavigationController alloc] initWithRootViewController:propertyPage];
+    MainPageNewView *mainPage = [[MainPageNewView alloc] initWithNibName:@"MainPageNewView" bundle:nil];
+    mainPage.tabBarItem.image = [UIImage imageNamed:@"tab_pro"];
+    mainPage.tabBarItem.title = @"首页";
+    UINavigationController *mainPageNav = [[UINavigationController alloc] initWithRootViewController:mainPage];
    
     //生活
     LifePageView *lifePage = [[LifePageView alloc] initWithNibName:@"LifePageView" bundle:nil];
@@ -284,7 +289,7 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = [NSArray arrayWithObjects:
-                                        propertyPageNav,
+                                        mainPageNav,
                                         lifePageNav,
                                         myPageNav,
                                         settingPageNav,

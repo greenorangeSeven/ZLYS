@@ -12,6 +12,8 @@
 
 @interface MainPageNewView : UIViewController<UIScrollViewDelegate, SGFocusImageFrameDelegate>
 {
+    Notice *notice;
+    
     NSMutableArray *advDatas;
     SGFocusImageFrame *bannerView;
     int advIndex;
@@ -23,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIButton *gatePassBtn;
 @property (weak, nonatomic) IBOutlet UILabel *gatePassLb;
+
+@property (weak, nonatomic) IBOutlet UILabel *noticeTitleLb;
+- (IBAction)noticeDetailAction:(id)sender;
 
 //物业通知
 - (IBAction)noticesAction:(id)sender;

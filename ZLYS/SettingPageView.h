@@ -28,5 +28,7 @@
 - (IBAction)checkVersionUpdate:(id)sender;
 //清除缓存
 - (IBAction)clearCacheAction:(id)sender;
+//修改信息
+- (IBAction)changeUserInfoAction:(id)sender;
 
 @end

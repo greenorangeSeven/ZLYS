@@ -104,7 +104,7 @@
 
 + (UIColor *)getColorForMain
 {
-    return [UIColor colorWithRed:0.90 green:0.47 blue:0.10 alpha:1.0];
+    return [UIColor colorWithRed:35.0/255.0 green:162.0/255.0 blue:95.0/255.0 alpha:1.0];
 }
 
 + (void)clearWebViewBackground:(UIWebView *)webView

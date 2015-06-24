@@ -28,9 +28,12 @@
 - (void)textViewDidChange:(UITextView *)textView
 {
     int textLength = [textView.text length];
-    if (textLength == 0) {
+    if (textLength == 0)
+    {
         [self.resultContentPlaceholder setHidden:NO];
-    }else{
+    }
+    else
+    {
         [self.resultContentPlaceholder setHidden:YES];
     }
 }

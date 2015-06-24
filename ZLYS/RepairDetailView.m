@@ -24,7 +24,10 @@
     NSArray *repairResultArray;
     //如果stateSort==4则为已评价
     NSString *stateSort;
+    NSString *resultContentStr;
 }
+
+@property (weak, nonatomic) UILabel *resultContentPlaceholder;
 
 @property (weak, nonatomic) UITextView *userRecontent;
 @property (weak, nonatomic) UIButton *submitScoreBtn;
@@ -276,19 +279,27 @@
         self.submitScoreBtn = cell.submitScoreBtn;
         
         //绑定ResultContentTv委托
-        [cell bindResultContentTvDelegate];
+//        [cell bindResultContentTvDelegate];
+        cell.resultContentTv.text = resultContentStr;
+        self.resultContentPlaceholder = cell.resultContentPlaceholder;
+        self.userRecontent.delegate = self;
         
         //如果已评价则不能再修改
         if ([stateSort isEqualToString:@"4"] == YES) {
             cell.resultContentTv.editable = NO;
             cell.resultContentPlaceholder.hidden = YES;
             cell.submitScoreBtn.hidden = YES;
+            cell.resultContentTv.text = result.userRecontent;
         }
         else
         {
             cell.resultContentTv.editable = YES;
             cell.resultContentPlaceholder.hidden = NO;
             cell.submitScoreBtn.hidden = NO;
+        }
+        
+        if ([cell.resultContentTv.text length] > 0) {
+            cell.resultContentPlaceholder.hidden = YES;
         }
         
         UIImage *dot, *star;
@@ -344,6 +355,20 @@
         cell.resultContentView.frame = resultContentFrame;
 
         return cell;
+    }
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    int textLength = [textView.text length];
+    resultContentStr = textView.text;
+    if (textLength == 0)
+    {
+        [self.resultContentPlaceholder setHidden:NO];
+    }
+    else
+    {
+        [self.resultContentPlaceholder setHidden:YES];
     }
 }
 

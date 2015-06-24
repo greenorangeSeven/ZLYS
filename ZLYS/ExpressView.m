@@ -315,17 +315,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    int row = [indexPath row];
-    //点击“下面20条”
-    if (row >= [expresses count]) {
-        //启动刷新
-        if (!isLoading) {
-            [self performSelector:@selector(reload:)];
+    if ([expresses count] > 0) {
+        int row = [indexPath row];
+        //点击“下面20条”
+        if (row >= [expresses count]) {
+            //启动刷新
+            if (!isLoading) {
+                [self performSelector:@selector(reload:)];
+            }
         }
-    }
-    else
-    {
-        
+        else
+        {
+            
+        }
     }
 }
 

@@ -39,7 +39,7 @@
 #define Appkey @"10000001"
 #define AppSecret @"Hr54hiz7"
 
-//#define api_base_url @"http://192.168.1.15:8080/zlys_api/"
+//#define api_base_url @"http://192.168.1.104:8080/zlys_api/"
 #define api_base_url @"http://115.236.59.15:80/zlys_api/"
 //登录接口
 #define api_login @"regUser/login.htm"
@@ -113,6 +113,8 @@
 #define api_findCellActivityOnTime @"activity/findCellActivityOnTime.htm"
 // 活动点赞
 #define api_addActivityHeart @"activity/addActivityHeart.htm"
+// 加入/取消活动点赞
+#define api_addCancelInHeart @"activity/addCancelInHeart.htm"
 // 加入/取消相关活动
 #define api_addCancelInActivity @"activity/addCancelInActivity.htm"
 //获得社区朋友圈（生活页接口）

@@ -14,6 +14,8 @@
 @property (nonatomic, retain) NSString *shopId;
 @property (nonatomic, retain) NSString *shopName;
 @property int stateId;
+@property int payType;
+@property (nonatomic, retain) NSString *payTypeName;
 @property (nonatomic, retain) NSString *stateName;
 @property int starttimeStamp;
 @property int payTimeStamp;

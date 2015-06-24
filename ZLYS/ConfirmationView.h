@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *addressTv;
 @property (weak, nonatomic) IBOutlet UITextView *remarkTv;
 - (IBAction)doOrder:(id)sender;
+- (IBAction)doOfflineAction:(id)sender;
 
 @end

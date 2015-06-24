@@ -215,6 +215,7 @@
             cell.stateNameLb.text = order.stateName;
             cell.receivingInfoLb.text = [NSString stringWithFormat:@"联系人:%@(%@)", order.receivingUserName, order.phone];
             cell.receivingAddressLb.text = order.receivingAddress;
+            cell.payTypeName.text = order.payTypeName;
             
             cell.shopName.text = order.shopName;
             cell.subTotalLb.text = [NSString stringWithFormat:@"合计:￥%0.2f", order.totalPrice];
@@ -237,6 +238,11 @@
             {
                 cell.payOrderBtn.hidden = YES;
                 cell.closeOrderBtn.hidden = YES;
+            }
+            
+            //货到付款也不需要支付按钮
+            if (order.payType == 2) {
+                cell.payOrderBtn.hidden = YES;
             }
             
             cell.closeOrderBtn.tag = indexRow;

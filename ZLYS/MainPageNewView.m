@@ -57,9 +57,70 @@
     userInfo = [[UserModel Instance] getUserInfo];
     
     [self getADVData];
+    [self getNotice];
     
     self.scrollView.contentSize=CGSizeMake(KSCROLLVIEW_WIDTH*2, 92);
     self.scrollView.delegate=self;
+}
+
+- (void)getNotice
+{
+    //如果有网络连接
+    if ([UserModel Instance].isNetworkRunning) {
+        //生成获取新闻列表URL
+        NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+        [param setValue:userInfo.defaultUserHouse.cellId forKey:@"cellId"];
+        [param setValue:@"1" forKey:@"pageNumbers"];
+        [param setValue:@"1" forKey:@"countPerPages"];
+        NSString *getNoticeListUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findPushInfo] params:param];
+        
+        [[AFOSCClient sharedClient]getPath:getNoticeListUrl parameters:Nil
+                                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                       @try {
+                                           NSMutableArray *notices = [Tool readJsonStrToNoticeArray:operation.responseString];
+                                           if ([notices count] > 0) {
+                                               notice = [notices objectAtIndex:0];
+                                               self.noticeTitleLb.text = notice.title;
+                                           }
+                                           notices = nil;
+//                                           [self doneLoadingTableViewData];
+//                                           if (IS_IPHONE_5) {
+//                                               self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.view.bounds.size.height + 1);
+//                                           }
+//                                           else
+//                                           {
+//                                               self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, 456+1);
+//                                           }
+                                       }
+                                       @catch (NSException *exception) {
+                                           [NdUncaughtExceptionHandler TakeException:exception];
+                                       }
+                                       @finally {
+//                                           [self doneLoadingTableViewData];
+                                       }
+                                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                       NSLog(@"列表获取出错");
+                                       if ([UserModel Instance].isNetworkRunning == NO) {
+                                           return;
+                                       }
+                                       
+                                       if ([UserModel Instance].isNetworkRunning) {
+                                           [Tool showCustomHUD:@"网络不给力" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
+                                       }
+                                   }];
+        
+    }
+}
+
+- (IBAction)noticeDetailAction:(id)sender {
+    if (notice) {
+        NSString *pushDetailHtm = [NSString stringWithFormat:@"%@%@%@", api_base_url, htm_pushDetailHtm , notice.pushId];
+        CommDetailView *detailView = [[CommDetailView alloc] init];
+        detailView.titleStr = @"物业通知";
+        detailView.urlStr = pushDetailHtm;
+        detailView.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:detailView animated:YES];
+    }
 }
 
 - (void)getADVData

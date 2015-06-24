@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -52,7 +52,7 @@
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-be-2vg">
                         <rect key="frame" x="245" y="29" width="67" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <state key="normal" title="当前" backgroundImage="button_orange">
+                        <state key="normal" title="当前" backgroundImage="button_green">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -64,11 +64,11 @@
                 <outlet property="userStateNameLb" destination="QuP-2H-3EO" id="hh9-YF-9Yc"/>
                 <outlet property="userTypeNameLb" destination="G5R-uG-Yn9" id="Thd-FE-8Zr"/>
             </connections>
-            <point key="canvasLocation" x="703" y="188"/>
+            <point key="canvasLocation" x="628" y="129"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="borrow_orange" width="17" height="13"/>
-        <image name="button_orange" width="232" height="45"/>
+        <image name="button_green" width="232" height="45"/>
     </resources>
 </document>
