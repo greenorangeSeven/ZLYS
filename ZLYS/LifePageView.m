@@ -574,12 +574,12 @@
 
 //周边商家
 - (IBAction)ShopTypeAction:(id)sender {
-//    ShopTypeView *shopTypeView = [[ShopTypeView alloc] init];
-//    shopTypeView.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:shopTypeView animated:YES];
-    GrouponClassView *commodityView = [[GrouponClassView alloc] init];
-    commodityView.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:commodityView animated:YES];
+    ShopTypeView *shopTypeView = [[ShopTypeView alloc] init];
+    shopTypeView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:shopTypeView animated:YES];
+//    GrouponClassView *commodityView = [[GrouponClassView alloc] init];
+//    commodityView.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:commodityView animated:YES];
 }
 
 //悦月刊

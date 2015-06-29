@@ -263,6 +263,7 @@
 #define MyOrderCellIdentifier @"MyOrderCellIdentifier"
 #define OrderCommodityCellIdentifier @"OrderCommodityCellIdentifier"
 #define MyServiceOrderCellIdentifier @"MyServiceOrderCellIdentifier"
+#define GrouponInfoCellIdentifier @"GrouponInfoCellIdentifier"
 
 
 #define Notification_RefreshMyRepairs @"Notification_RefreshMyRepairs"

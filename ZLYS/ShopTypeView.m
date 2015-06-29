@@ -11,6 +11,7 @@
 #import "ShopInfoCell.h"
 #import "ShopInfo.h"
 #import "UIImageView+WebCache.h"
+#import "GrouponShopView.h"
 
 @interface ShopTypeView ()
 
@@ -23,7 +24,7 @@
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    titleLabel.text = @"周边商家";
+    titleLabel.text = @"商家集市";
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textColor = [Tool getColorForMain];
     titleLabel.textAlignment = UITextAlignmentCenter;
@@ -572,13 +573,18 @@
     }
     else
     {
-        //        News *n = [news objectAtIndex:[indexPath row]];
-        //        if (n) {
-        //            NewsDetailView *newsDetail = [[NewsDetailView alloc] init];
-        //            newsDetail.news = n;
-        //            newsDetail.catalog = catalog;
-        //            [self.navigationController pushViewController:newsDetail animated:YES];
-        //        }
+        ShopInfo *shop = [shops objectAtIndex:row];
+        if (shop) {
+            Groupon *groupon = [[Groupon alloc] init];
+            groupon.shopId = shop.shopId;
+            groupon.shopName = shop.shopName;
+            groupon.shopAddress = shop.shopAddress;
+            groupon.imgUrlFull = shop.imgUrlFull;
+            
+            GrouponShopView *detailView = [[GrouponShopView alloc] init];
+            detailView.groupon = groupon;
+            [self.navigationController pushViewController:detailView animated:YES];
+        }
     }
 }
 

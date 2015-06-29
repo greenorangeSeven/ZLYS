@@ -14,6 +14,7 @@
 #import "CommodityDetailView.h"
 #import "UIImageView+WebCache.h"
 #import "ShopType.h"
+#import "GrouponInfoView.h"
 
 @interface GrouponClassView ()
 
@@ -168,7 +169,7 @@
     ShopType *class = [classes objectAtIndex:[indexPath row]];
     if (class)
     {
-        GrouponView *grouponView = [[GrouponView alloc] init];
+        GrouponInfoView *grouponView = [[GrouponInfoView alloc] init];
         grouponView.hidesBottomBarWhenPushed = YES;
         grouponView.shopType = class;
         [self.navigationController pushViewController:grouponView animated:YES];

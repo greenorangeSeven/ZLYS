@@ -241,6 +241,10 @@
 		14D3C0A71A2874EB003E650A /* Community.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D3C0A61A2874EB003E650A /* Community.m */; };
 		14D3C0AA1A2878E0003E650A /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D3C0A91A2878E0003E650A /* Building.m */; };
 		14D3C0AD1A28792F003E650A /* HouseNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D3C0AC1A28792F003E650A /* HouseNum.m */; };
+		14DED7011B40F17700063B71 /* GrouponInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DED6FF1B40F17700063B71 /* GrouponInfoView.m */; };
+		14DED7021B40F17700063B71 /* GrouponInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DED7001B40F17700063B71 /* GrouponInfoView.xib */; };
+		14DED7071B40F1EF00063B71 /* GrouponInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DED7051B40F1EF00063B71 /* GrouponInfoCell.m */; };
+		14DED7081B40F1EF00063B71 /* GrouponInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DED7061B40F1EF00063B71 /* GrouponInfoCell.xib */; };
 		14E3A0641A275C77009D0EB0 /* RegisterStep1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E3A0621A275C77009D0EB0 /* RegisterStep1View.m */; };
 		14E3A0651A275C77009D0EB0 /* RegisterStep1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3A0631A275C77009D0EB0 /* RegisterStep1View.xib */; };
 		14E3A0691A276C92009D0EB0 /* RegisterStep2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E3A0671A276C92009D0EB0 /* RegisterStep2View.m */; };
@@ -927,6 +931,12 @@
 		14D3C0A91A2878E0003E650A /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		14D3C0AB1A28792F003E650A /* HouseNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseNum.h; sourceTree = "<group>"; };
 		14D3C0AC1A28792F003E650A /* HouseNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseNum.m; sourceTree = "<group>"; };
+		14DED6FE1B40F17700063B71 /* GrouponInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponInfoView.h; sourceTree = "<group>"; };
+		14DED6FF1B40F17700063B71 /* GrouponInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponInfoView.m; sourceTree = "<group>"; };
+		14DED7001B40F17700063B71 /* GrouponInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponInfoView.xib; sourceTree = "<group>"; };
+		14DED7041B40F1EF00063B71 /* GrouponInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponInfoCell.h; sourceTree = "<group>"; };
+		14DED7051B40F1EF00063B71 /* GrouponInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponInfoCell.m; sourceTree = "<group>"; };
+		14DED7061B40F1EF00063B71 /* GrouponInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponInfoCell.xib; sourceTree = "<group>"; };
 		14E3A0611A275C77009D0EB0 /* RegisterStep1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterStep1View.h; sourceTree = "<group>"; };
 		14E3A0621A275C77009D0EB0 /* RegisterStep1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterStep1View.m; sourceTree = "<group>"; };
 		14E3A0631A275C77009D0EB0 /* RegisterStep1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterStep1View.xib; sourceTree = "<group>"; };
@@ -1801,6 +1811,12 @@
 				14B36AE41B3D2C75002D217F /* GrouponView.h */,
 				14B36AE51B3D2C75002D217F /* GrouponView.m */,
 				14B36AE61B3D2C75002D217F /* GrouponView.xib */,
+				14DED6FE1B40F17700063B71 /* GrouponInfoView.h */,
+				14DED6FF1B40F17700063B71 /* GrouponInfoView.m */,
+				14DED7001B40F17700063B71 /* GrouponInfoView.xib */,
+				14DED7041B40F1EF00063B71 /* GrouponInfoCell.h */,
+				14DED7051B40F1EF00063B71 /* GrouponInfoCell.m */,
+				14DED7061B40F1EF00063B71 /* GrouponInfoCell.xib */,
 				14B36AE71B3D2C75002D217F /* GrouponShopView.h */,
 				14B36AE81B3D2C75002D217F /* GrouponShopView.m */,
 				14B36AE91B3D2C75002D217F /* GrouponShopView.xib */,
@@ -3008,6 +3024,7 @@
 				14B36AD61B3D283B002D217F /* CommodityView.xib in Resources */,
 				14B36AF21B3D2C75002D217F /* GrouponClassReusableView.xib in Resources */,
 				14C117871A31E2E8009CAC7E /* ExpressHistoryView.xib in Resources */,
+				14DED7021B40F17700063B71 /* GrouponInfoView.xib in Resources */,
 				14FDB9A31A26C94E006EFFCC /* LoadingCell.xib in Resources */,
 				14FDB7A31A26B6E3006EFFCC /* LoginView.xib in Resources */,
 				14B641BB1A2D42AC00C350A0 /* LifePageView.xib in Resources */,
@@ -3037,6 +3054,7 @@
 				140225C31A46FDC300D811B8 /* PublishTradeView.xib in Resources */,
 				1406CFF61A48F78D00CF3FEE /* InviteView.xib in Resources */,
 				14FDB44B1A25B73A006EFFCC /* LaunchScreen.xib in Resources */,
+				14DED7081B40F1EF00063B71 /* GrouponInfoCell.xib in Resources */,
 				14EFC4041A89A6CD00AE881D /* cb_dark_off.png in Resources */,
 				14EFC3201A899DCB00AE881D /* PayFeeView.xib in Resources */,
 				142D9E581A43F68300EF59A1 /* CircleOfFriendsPublishView.xib in Resources */,
@@ -3304,6 +3322,7 @@
 				14B4D46A1A3C26BD00933A5A /* MonthlyCell.m in Sources */,
 				14FDB99A1A26C94E006EFFCC /* EGOCache.m in Sources */,
 				14B36AF11B3D2C75002D217F /* GrouponClassReusableView.m in Sources */,
+				14DED7011B40F17700063B71 /* GrouponInfoView.m in Sources */,
 				14B4D3EC1A3744D500933A5A /* ShopType.m in Sources */,
 				14B4D44A1A3ACBE100933A5A /* Unit.m in Sources */,
 				14B4D4661A3C24A900933A5A /* Monthly.m in Sources */,
@@ -3340,6 +3359,7 @@
 				14FDB9C51A26C94F006EFFCC /* PSTCollectionViewCell.m in Sources */,
 				14EFC4191A89A6CD00AE881D /* SSCheckBoxView.m in Sources */,
 				14FDB9BE1A26C94F006EFFCC /* MWPhotoBrowser.m in Sources */,
+				14DED7071B40F1EF00063B71 /* GrouponInfoCell.m in Sources */,
 				14E3A0691A276C92009D0EB0 /* RegisterStep2View.m in Sources */,
 				14FDB98F1A26C94E006EFFCC /* IconDownloader.m in Sources */,
 				14FDB9B21A26C94E006EFFCC /* FMDatabasePool.m in Sources */,
@@ -3577,7 +3597,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WEN XIKE (5ACSFNTTZR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEN XIKE (KPRX6RYNKY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					Framework,
@@ -3601,7 +3621,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ZLYS;
-				PROVISIONING_PROFILE = "59aab088-8197-4242-a10d-966df3f23941";
+				PROVISIONING_PROFILE = "19e60260-76ad-470a-925f-3162c91abc6f";
 			};
 			name = Debug;
 		};
@@ -3611,7 +3631,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WEN XIKE (5ACSFNTTZR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: WEN XIKE (KPRX6RYNKY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					Framework,
@@ -3635,7 +3655,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ZLYS;
-				PROVISIONING_PROFILE = "59aab088-8197-4242-a10d-966df3f23941";
+				PROVISIONING_PROFILE = "19e60260-76ad-470a-925f-3162c91abc6f";
 			};
 			name = Release;
 		};
