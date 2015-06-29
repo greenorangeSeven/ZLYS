@@ -1,6 +1,6 @@
 //
 //  CommodityClassView.h
-//  XuChangLife
+//  WHDLife
 //
 //  Created by Seven on 15-1-16.
 //  Copyright (c) 2015年 Seven. All rights reserved.
@@ -10,7 +10,7 @@
 #import "SGFocusImageFrame.h"
 #import "SGFocusImageItem.h"
 
-@interface CommodityClassView : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,EGORefreshTableHeaderDelegate,MBProgressHUDDelegate, SGFocusImageFrameDelegate>
+@interface GrouponClassView : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,EGORefreshTableHeaderDelegate,MBProgressHUDDelegate, SGFocusImageFrameDelegate>
 {
     NSMutableArray *classes;
     BOOL isLoading;
@@ -27,7 +27,6 @@
 }
 
 //@property (strong, nonatomic) UIImageView *advIv;
-
 @property (weak, nonatomic) IBOutlet UIImageView *advIv;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

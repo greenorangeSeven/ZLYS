@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommodityClassView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrouponClassView">
             <connections>
-                <outlet property="advIv" destination="C6K-OF-MmH" id="dTw-I0-yge"/>
+                <outlet property="advIv" destination="PWc-03-8gJ" id="rdY-Iw-Qt6"/>
                 <outlet property="collectionView" destination="5pu-TB-IbJ" id="XDn-X6-yQd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,24 +26,24 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C6K-OF-MmH">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-03-8gJ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="aqz-Sa-YN4"/>
-                        <constraint firstAttribute="width" constant="320" id="qxh-cU-gG3"/>
+                        <constraint firstAttribute="width" constant="320" id="8oe-3X-Ot1"/>
+                        <constraint firstAttribute="height" constant="140" id="b2t-Fa-JFp"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="5pu-TB-IbJ" secondAttribute="trailing" id="1Ne-UQ-8Sz"/>
-                <constraint firstAttribute="trailing" secondItem="C6K-OF-MmH" secondAttribute="trailing" id="A9t-3m-T4A"/>
-                <constraint firstItem="C6K-OF-MmH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ABO-QB-A3w"/>
-                <constraint firstItem="5pu-TB-IbJ" firstAttribute="top" secondItem="C6K-OF-MmH" secondAttribute="bottom" id="BbL-In-MMX"/>
-                <constraint firstItem="C6K-OF-MmH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HVY-sg-haD"/>
-                <constraint firstItem="5pu-TB-IbJ" firstAttribute="top" secondItem="C6K-OF-MmH" secondAttribute="bottom" id="Qz3-7M-41t"/>
-                <constraint firstItem="5pu-TB-IbJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z9i-gn-EbD"/>
-                <constraint firstAttribute="bottom" secondItem="5pu-TB-IbJ" secondAttribute="bottom" id="vfe-GZ-YBP"/>
+                <constraint firstAttribute="trailing" secondItem="PWc-03-8gJ" secondAttribute="trailing" id="3ng-00-eWN"/>
+                <constraint firstItem="PWc-03-8gJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lrr-kU-cZx"/>
+                <constraint firstItem="5pu-TB-IbJ" firstAttribute="top" secondItem="PWc-03-8gJ" secondAttribute="bottom" id="dQg-qy-d95"/>
+                <constraint firstItem="5pu-TB-IbJ" firstAttribute="top" secondItem="PWc-03-8gJ" secondAttribute="bottom" id="ed6-DJ-bxx"/>
+                <constraint firstItem="PWc-03-8gJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gfH-4c-R9E"/>
+                <constraint firstItem="5pu-TB-IbJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hSe-HB-I5q"/>
+                <constraint firstAttribute="trailing" secondItem="5pu-TB-IbJ" secondAttribute="trailing" id="qXZ-fT-Ghg"/>
+                <constraint firstAttribute="bottom" secondItem="5pu-TB-IbJ" secondAttribute="bottom" id="vG6-b1-Nrn"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="330" y="114"/>

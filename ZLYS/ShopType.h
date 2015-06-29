@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Jastor.h"
 
-@interface ShopType : NSObject
+@interface ShopType : Jastor
 
 @property (nonatomic, retain) NSString *shopTypeId;
 @property (nonatomic, retain) NSString *shopTypeName;

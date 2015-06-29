@@ -1,21 +1,21 @@
 //
-//  CommodityClassReusableView.m
-//  XuChangLife
+//  CommodityFooterView.m
+//  QuJing
 //
-//  Created by Seven on 15-1-16.
+//  Created by Seven on 15/6/12.
 //  Copyright (c) 2015年 Seven. All rights reserved.
 //
 
-#import "CommodityClassReusableView.h"
+#import "CommodityFooterView.h"
 
-@implementation CommodityClassReusableView
+@implementation CommodityFooterView
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // 初始化时加载collectionCell.xib文件
-        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"CommodityClassReusableView" owner:self options:nil];
+        NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"CommodityFooterView" owner:self options:nil];
         
         // 如果路径不存在，return nil
         if (arrayOfViews.count < 1)

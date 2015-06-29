@@ -1,42 +1,45 @@
 //
 //  CommodityClassView.m
-//  XuChangLife
+//  WHDLife
 //
 //  Created by Seven on 15-1-16.
 //  Copyright (c) 2015年 Seven. All rights reserved.
 //
 
-#import "CommodityClassView.h"
-#import "CommodityClassCell.h"
-#import "CommodityClass.h"
-#import "UIImageView+WebCache.h"
+#import "GrouponClassView.h"
+#import "GrouponClassCell.h"
 #import "CommDetailView.h"
-#import "CommodityView.h"
+#import "GrouponView.h"
 #import "ActivityDetailView.h"
 #import "CommodityDetailView.h"
+#import "UIImageView+WebCache.h"
+#import "ShopType.h"
 
-@interface CommodityClassView ()
+@interface GrouponClassView ()
 
 @end
 
-@implementation CommodityClassView
+@implementation GrouponClassView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    titleLabel.text = @"小区快送";
+    titleLabel.text = @"商家集市";
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textColor = [Tool getColorForMain];
     titleLabel.textAlignment = UITextAlignmentCenter;
     self.navigationItem.titleView = titleLabel;
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor clearColor];
-    [self.collectionView registerClass:[CommodityClassCell class] forCellWithReuseIdentifier:CommodityClassCellIdentifier];
-//    [self.collectionView registerClass:[CommodityClassReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CommodityClassHead"];
+    [self.collectionView registerClass:[GrouponClassCell class] forCellWithReuseIdentifier:@"GrouponClassCell"];
+    //    [self.collectionView registerClass:[CommodityClassReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CommodityClassHead"];
     
     //添加的代码
     if (_refreshHeaderView == nil) {
@@ -47,31 +50,35 @@
     }
     [_refreshHeaderView refreshLastUpdatedDate];
     
-    [self refreshExpressData];
-    
+    [self refreshClassData];
     [self getADVData];
 }
 
-- (void)refreshExpressData
+- (void)refreshClassData
 {
     //如果有网络连接
     if ([UserModel Instance].isNetworkRunning) {
         //生成获取商品分类URL
         NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-        [param setValue:@"1" forKey:@"pageNumbers"];
-        [param setValue:@"40" forKey:@"countPerPages"];
-        NSString *findExpressinInfoByPageUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findCommodityClassByPage] params:param];
+        [param setValue:@"0" forKey:@"classType"];
+        NSString *findExpressinInfoByPageUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findShopTypeList] params:param];
         [[AFOSCClient sharedClient]getPath:findExpressinInfoByPageUrl parameters:Nil
                                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                        @try {
+                                           NSData *data = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
+                                           NSError *error;
+                                           NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                           
+                                           NSArray *arry = [json objectForKey:@"data"];
+                                           
                                            [classes removeAllObjects];
-                                           classes = [Tool readJsonStrToCommodityClassArray:operation.responseString];
+                                           classes = [NSMutableArray arrayWithArray:[Tool readJsonToObjArray:arry andObjClass:[ShopType class]]];
                                            int n = [classes count] % 3;
                                            if(n > 0)
                                            {
                                                for (int i = 0; i < 3 - n; i++) {
-                                                   CommodityClass *class = [[CommodityClass alloc] init];
-                                                   class.classId = @"-1";
+                                                   ShopType *class = [[ShopType alloc] init];
+                                                   class.shopTypeId = @"-1";
                                                    [classes addObject:class];
                                                }
                                            }
@@ -112,20 +119,19 @@
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CommodityClassCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CommodityClassCellIdentifier forIndexPath:indexPath];
+    GrouponClassCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GrouponClassCell" forIndexPath:indexPath];
     if (!cell) {
-        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"CommodityClassCell" owner:self options:nil];
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"GrouponClassCell" owner:self options:nil];
         for (NSObject *o in objects) {
-            if ([o isKindOfClass:[CommodityClassCell class]]) {
-                cell = (CommodityClassCell *)o;
+            if ([o isKindOfClass:[GrouponClassCell class]]) {
+                cell = (GrouponClassCell *)o;
                 break;
             }
         }
     }
     int indexRow = [indexPath row];
-    CommodityClass *cate = [classes objectAtIndex:indexRow];
-    
-    if ([cate.classId isEqualToString:@"-1"]) {
+    ShopType *cate = [classes objectAtIndex:indexRow];
+    if ([cate.shopTypeId isEqualToString:@"-1"]) {
         cell.classImageIv.hidden = YES;
         cell.classNameLb.hidden = YES;
     }
@@ -133,10 +139,9 @@
     {
         cell.classImageIv.hidden = NO;
         cell.classNameLb.hidden = NO;
-        cell.classNameLb.text = cate.className;
+        cell.classNameLb.text = cate.shopTypeName;
         NSString *imageUrl = [NSString stringWithFormat:@"%@_200", cate.imgUrlFull];
-        [cell.classImageIv setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"loadpic.png"]];
-        
+        [cell.classImageIv sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"loadpic.png"]];
     }
     return cell;
 }
@@ -160,13 +165,14 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CommodityClass *class = [classes objectAtIndex:[indexPath row]];
-    if (class) {
-        if ([class.classId isEqualToString:@"-1"] == NO) {
-            CommodityView *commodityView = [[CommodityView alloc] init];
-            commodityView.classOb = class;
-            [self.navigationController pushViewController:commodityView animated:YES];
-        }
+    ShopType *class = [classes objectAtIndex:[indexPath row]];
+    if (class)
+    {
+        GrouponView *grouponView = [[GrouponView alloc] init];
+        grouponView.hidesBottomBarWhenPushed = YES;
+        grouponView.shopType = class;
+        [self.navigationController pushViewController:grouponView animated:YES];
+        
     }
 }
 
@@ -223,7 +229,7 @@
 {
     if ([UserModel Instance].isNetworkRunning) {
         isLoadOver = NO;
-        [self refreshExpressData];
+        [self refreshClassData];
     }
 }
 
@@ -245,19 +251,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-// 返回headview或footview
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-//    UICollectionReusableView *reusableview = nil;
-//    if (kind == UICollectionElementKindSectionHeader){
-//        CommodityClassReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CommodityClassHead" forIndexPath:indexPath];
-//        reusableview = headerView;
-////        [headerView getADVData];
-//                self.advIv = headerView.advIv;
-//        [self getADVData];
-//    }
-//    return reusableview;
-//}
 
 - (void)getADVData
 {
@@ -346,13 +339,13 @@
 {
     [super viewWillAppear:animated];
     bannerView.delegate = self;
-
     [self.navigationController.navigationBar setTintColor:[Tool getColorForMain]];
     
     self.navigationController.navigationBar.hidden = NO;
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"返回";
     self.navigationItem.backBarButtonItem = backItem;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -362,13 +355,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -1,44 +1,40 @@
 //
 //  CommodityView.m
-//  XuChangLife
+//  WHDLife
 //
 //  Created by Seven on 15-1-16.
 //  Copyright (c) 2015年 Seven. All rights reserved.
 //
 
-#import "CommodityView.h"
-#import "CommodityCell.h"
+#import "GrouponView.h"
+#import "GrouponCell.h"
 #import "Commodity.h"
 #import "CommodityDetailView.h"
-#import "CommodityFooterView.h"
 #import "UIImageView+WebCache.h"
+#import "Groupon.h"
+#import "GrouponShopView.h"
 
-@interface CommodityView ()
-{
-    CommodityFooterView *footerView;
-}
+@interface GrouponView ()
 
 @end
 
-@implementation CommodityView
+@implementation GrouponView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    titleLabel.text = self.classOb.className;
+    titleLabel.text = self.shopType.shopTypeName;
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textColor = [Tool getColorForMain];
     titleLabel.textAlignment = UITextAlignmentCenter;
     self.navigationItem.titleView = titleLabel;
     
-    [self.collectionView registerClass:[CommodityFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"CommodityFooter"];
-    
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor clearColor];
-    [self.collectionView registerClass:[CommodityCell class] forCellWithReuseIdentifier:CommodityCellIdentifier];
+    [self.collectionView registerClass:[GrouponCell class] forCellWithReuseIdentifier:@"GrouponCell"];
     
     allCount = 0;
     //添加的代码
@@ -86,12 +82,20 @@
         [param setValue:[NSString stringWithFormat:@"%d", pageIndex] forKey:@"pageNumbers"];
         [param setValue:@"20" forKey:@"countPerPages"];
         [param setValue:@"0" forKey:@"stateId"];
-        [param setValue:self.classOb.classId forKey:@"classId"];
+        [param setValue:@"0" forKey:@"classType"];
+        [param setValue:self.shopType.shopTypeId forKey:@"shopTypeId"];
         
-        NSString *findCommodityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findSaleCommodityByPage] params:param];
-        [[AFOSCClient sharedClient]getPath:findCommodityUrl parameters:Nil
+        NSString *findCommodityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findShopInfoByPage] params:param];
+        [[AFOSCClient sharedClient] getPath:findCommodityUrl parameters:Nil
                                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                       NSMutableArray *commNews = [Tool readJsonStrToCommodityArray:operation.responseString];
+                                       NSData *data = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
+                                       NSError *error;
+                                       NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                       
+                                       NSDictionary *datas = [json objectForKey:@"data"];
+                                       NSArray *array = [datas objectForKey:@"resultsList"];
+                                       
+                                       NSMutableArray *commNews = [NSMutableArray arrayWithArray:[Tool readJsonToObjArray:array andObjClass:[Groupon class]]];
                                        isLoading = NO;
                                        if (!noRefresh) {
                                            [self clear];
@@ -99,15 +103,10 @@
                                        
                                        @try {
                                            int count = [commNews count];
-                                           if(count == 0)
-                                           {
-                                               [Tool showCustomHUD:@"暂无商品" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
-                                           }
                                            allCount += count;
                                            if (count < 20)
                                            {
                                                isLoadOver = YES;
-                                               footerView.moreLb.text = @"已加载全部";
                                            }
                                            [commoditys addObjectsFromArray:commNews];
                                            [self.collectionView reloadData];
@@ -150,23 +149,23 @@
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CommodityCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CommodityCellIdentifier forIndexPath:indexPath];
+    GrouponCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GrouponCell" forIndexPath:indexPath];
     if (!cell) {
-        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"CommodityCell" owner:self options:nil];
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"GrouponCell" owner:self options:nil];
         for (NSObject *o in objects) {
-            if ([o isKindOfClass:[CommodityCell class]]) {
-                cell = (CommodityCell *)o;
+            if ([o isKindOfClass:[GrouponCell class]]) {
+                cell = (GrouponCell *)o;
                 break;
             }
         }
     }
     int indexRow = [indexPath row];
-    Commodity *commodity = [commoditys objectAtIndex:indexRow];
-    NSString *imageUrl = [NSString stringWithFormat:@"%@_200",[commodity.imgStrList objectAtIndex:0]];
-    [cell.imageIv setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"loadpic.png"]];
+    Groupon *groupon = [commoditys objectAtIndex:indexRow];
+    NSString *imageUrl = [NSString stringWithFormat:@"%@_200",groupon.imgUrlFull];
+    [cell.imageIv sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"loadpic.png"]];
     
-    cell.nameLb.text = commodity.commodityName;
-    cell.priceLb.text = [NSString stringWithFormat:@"￥%0.2f元", commodity.price];
+    cell.nameLb.text = groupon.shopName;
+    cell.priceLb.text = groupon.shopAddress;
     
     
     return cell;
@@ -192,10 +191,10 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     int indexRow = [indexPath row];
-    Commodity *commodity = [commoditys objectAtIndex:indexRow];
-    if (commodity) {
-        CommodityDetailView *detailView = [[CommodityDetailView alloc] init];
-        detailView.commodityId = commodity.commodityId;
+    Groupon *groupon = [commoditys objectAtIndex:indexRow];
+    if (groupon) {
+        GrouponShopView *detailView = [[GrouponShopView alloc] init];
+        detailView.groupon = groupon;
         [self.navigationController pushViewController:detailView animated:YES];
     }
 }
@@ -261,17 +260,6 @@
 - (void)dealloc
 {
     [self.collectionView setDelegate:nil];
-}
-
-// 返回headview或footview
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    UICollectionReusableView *reusableview = nil;
-    if (kind == UICollectionElementKindSectionFooter){
-        footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"CommodityFooter" forIndexPath:indexPath];
-        
-        reusableview = footerView;
-    }
-    return reusableview;
 }
 
 - (void)viewWillAppear:(BOOL)animated

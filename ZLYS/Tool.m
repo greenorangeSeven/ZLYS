@@ -1679,4 +1679,22 @@
     return dic;
 }
 
++ (id)readJsonDicToObj:(NSDictionary *)jsonDic andObjClass:(Class)objClass
+{
+    Jastor *obj = [[objClass alloc] initWithDictionary:jsonDic];
+    return obj;
+}
+
++ (NSArray *)readJsonToObjArray:(NSArray *)jsonArray andObjClass:(Class)objClass
+{
+    NSMutableArray *objArray = [[NSMutableArray alloc] init];
+    for(NSDictionary *dic in jsonArray)
+    {
+        Jastor *obj = [[objClass alloc] initWithDictionary:dic];
+        [objArray addObject:obj];
+    }
+    
+    return objArray;
+}
+
 @end

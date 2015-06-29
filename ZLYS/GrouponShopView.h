@@ -1,6 +1,6 @@
 //
 //  CommodityView.h
-//  XuChangLife
+//  WHDLife
 //
 //  Created by Seven on 15-1-16.
 //  Copyright (c) 2015年 Seven. All rights reserved.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CommodityClass.h"
+#import "Groupon.h"
 
-@interface CommodityView : UIViewController<EGORefreshTableHeaderDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface GrouponShopView : UIViewController<EGORefreshTableHeaderDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     NSMutableArray *commoditys;
 
@@ -21,7 +22,7 @@
     int allCount;
 }
 
-@property (copy, nonatomic) CommodityClass *classOb;
+@property (copy, nonatomic) Groupon *groupon;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 //下拉刷新

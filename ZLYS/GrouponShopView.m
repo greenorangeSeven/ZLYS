@@ -1,33 +1,33 @@
 //
 //  CommodityView.m
-//  XuChangLife
+//  WHDLife
 //
 //  Created by Seven on 15-1-16.
 //  Copyright (c) 2015年 Seven. All rights reserved.
 //
 
-#import "CommodityView.h"
+#import "GrouponShopView.h"
 #import "CommodityCell.h"
 #import "Commodity.h"
 #import "CommodityDetailView.h"
-#import "CommodityFooterView.h"
 #import "UIImageView+WebCache.h"
+#import "CommodityFooterView.h"
 
-@interface CommodityView ()
+@interface GrouponShopView ()
 {
     CommodityFooterView *footerView;
 }
 
 @end
 
-@implementation CommodityView
+@implementation GrouponShopView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    titleLabel.text = self.classOb.className;
+    titleLabel.text = self.groupon.shopName;
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textColor = [Tool getColorForMain];
     titleLabel.textAlignment = UITextAlignmentCenter;
@@ -85,12 +85,13 @@
         NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
         [param setValue:[NSString stringWithFormat:@"%d", pageIndex] forKey:@"pageNumbers"];
         [param setValue:@"20" forKey:@"countPerPages"];
+        [param setValue:self.groupon.shopId forKey:@"shopId"];
         [param setValue:@"0" forKey:@"stateId"];
-        [param setValue:self.classOb.classId forKey:@"classId"];
         
-        NSString *findCommodityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findSaleCommodityByPage] params:param];
+        NSString *findCommodityUrl = [Tool serializeURL:[NSString stringWithFormat:@"%@%@", api_base_url, api_findCommodityByPage] params:param];
         [[AFOSCClient sharedClient]getPath:findCommodityUrl parameters:Nil
                                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                       NSLog(@"the :%@",operation.responseString);
                                        NSMutableArray *commNews = [Tool readJsonStrToCommodityArray:operation.responseString];
                                        isLoading = NO;
                                        if (!noRefresh) {
@@ -99,10 +100,6 @@
                                        
                                        @try {
                                            int count = [commNews count];
-                                           if(count == 0)
-                                           {
-                                               [Tool showCustomHUD:@"暂无商品" andView:self.view  andImage:@"37x-Failure.png" andAfterDelay:1];
-                                           }
                                            allCount += count;
                                            if (count < 20)
                                            {
@@ -167,7 +164,6 @@
     
     cell.nameLb.text = commodity.commodityName;
     cell.priceLb.text = [NSString stringWithFormat:@"￥%0.2f元", commodity.price];
-    
     
     return cell;
 }
@@ -258,11 +254,6 @@
     }
 }
 
-- (void)dealloc
-{
-    [self.collectionView setDelegate:nil];
-}
-
 // 返回headview或footview
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView *reusableview = nil;
@@ -272,6 +263,11 @@
         reusableview = footerView;
     }
     return reusableview;
+}
+
+- (void)dealloc
+{
+    [self.collectionView setDelegate:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated

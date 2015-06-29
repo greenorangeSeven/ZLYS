@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommodityView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrouponShopView">
             <connections>
                 <outlet property="collectionView" destination="VfM-Zw-jj8" id="25u-ed-OsB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,17 +21,17 @@
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="10" id="LET-O5-GCs">
                         <size key="itemSize" width="155" height="175"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="50" height="50"/>
+                        <size key="footerReferenceSize" width="320" height="50"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="VfM-Zw-jj8" secondAttribute="trailing" id="7Qs-tL-lXv"/>
-                <constraint firstItem="VfM-Zw-jj8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HYe-Zf-9Vk"/>
-                <constraint firstAttribute="bottom" secondItem="VfM-Zw-jj8" secondAttribute="bottom" id="Tne-Tm-7YP"/>
-                <constraint firstItem="VfM-Zw-jj8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xRc-de-9PT"/>
+                <constraint firstItem="VfM-Zw-jj8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0YP-d1-Hpt"/>
+                <constraint firstAttribute="bottom" secondItem="VfM-Zw-jj8" secondAttribute="bottom" id="738-91-YFv"/>
+                <constraint firstAttribute="trailing" secondItem="VfM-Zw-jj8" secondAttribute="trailing" id="qs8-fo-sSp"/>
+                <constraint firstItem="VfM-Zw-jj8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rBv-us-e6u"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="365" y="161"/>

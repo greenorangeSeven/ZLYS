@@ -314,6 +314,11 @@
     webViewY = self.properyView.frame.origin.y+ self.properyView.frame.size.height;
     self.detailWebView.frame = CGRectMake(self.detailWebView.frame.origin.x, webViewY, self.detailWebView.frame.size.width, 0);
     
+    if(commodityDetail.details == nil )
+    {
+        commodityDetail.details = @"暂无详情";
+    }
+    
     NSString *html = [NSString stringWithFormat:@"<body>%@<div id='web_body'>%@</div></body>", HTML_Style, commodityDetail.details];
     NSString *result = [Tool getHTMLString:html];
     //WebView的背景颜色去除

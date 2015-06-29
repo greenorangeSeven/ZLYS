@@ -17,6 +17,7 @@
 #import "CircleOfFriendsView.h"
 #import "CommDetailView.h"
 #import "CommodityClassView.h"
+#import "GrouponClassView.h"
 
 @interface LifePageView ()
 {
@@ -576,7 +577,7 @@
 //    ShopTypeView *shopTypeView = [[ShopTypeView alloc] init];
 //    shopTypeView.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:shopTypeView animated:YES];
-    CommodityClassView *commodityView = [[CommodityClassView alloc] init];
+    GrouponClassView *commodityView = [[GrouponClassView alloc] init];
     commodityView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:commodityView animated:YES];
 }

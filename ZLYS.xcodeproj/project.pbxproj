@@ -108,6 +108,31 @@
 		148AD7DB1A3F23AC00290203 /* BorrowRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148AD7D91A3F23AC00290203 /* BorrowRecordCell.xib */; };
 		149575711A2CA2D100320CF8 /* PropertyPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495756F1A2CA2D100320CF8 /* PropertyPageView.m */; };
 		149575721A2CA2D100320CF8 /* PropertyPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149575701A2CA2D100320CF8 /* PropertyPageView.xib */; };
+		14B36ACD1B3D283B002D217F /* CommodityClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36ABC1B3D283B002D217F /* CommodityClassView.m */; };
+		14B36ACE1B3D283B002D217F /* CommodityClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36ABD1B3D283B002D217F /* CommodityClassView.xib */; };
+		14B36ACF1B3D283B002D217F /* CommodityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36ABF1B3D283B002D217F /* CommodityClassCell.m */; };
+		14B36AD01B3D283B002D217F /* CommodityClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AC01B3D283B002D217F /* CommodityClassCell.xib */; };
+		14B36AD11B3D283B002D217F /* CommodityClassReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AC21B3D283B002D217F /* CommodityClassReusableView.m */; };
+		14B36AD21B3D283B002D217F /* CommodityClassReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AC31B3D283B002D217F /* CommodityClassReusableView.xib */; };
+		14B36AD31B3D283B002D217F /* CommodityFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AC51B3D283B002D217F /* CommodityFooterView.m */; };
+		14B36AD41B3D283B002D217F /* CommodityFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AC61B3D283B002D217F /* CommodityFooterView.xib */; };
+		14B36AD51B3D283B002D217F /* CommodityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AC81B3D283B002D217F /* CommodityView.m */; };
+		14B36AD61B3D283B002D217F /* CommodityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AC91B3D283B002D217F /* CommodityView.xib */; };
+		14B36AD71B3D283B002D217F /* CommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36ACB1B3D283B002D217F /* CommodityCell.m */; };
+		14B36AD81B3D283B002D217F /* CommodityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36ACC1B3D283B002D217F /* CommodityCell.xib */; };
+		14B36AED1B3D2C75002D217F /* GrouponClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36ADC1B3D2C75002D217F /* GrouponClassView.m */; };
+		14B36AEE1B3D2C75002D217F /* GrouponClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36ADD1B3D2C75002D217F /* GrouponClassView.xib */; };
+		14B36AEF1B3D2C75002D217F /* GrouponClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36ADF1B3D2C75002D217F /* GrouponClassCell.m */; };
+		14B36AF01B3D2C75002D217F /* GrouponClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AE01B3D2C75002D217F /* GrouponClassCell.xib */; };
+		14B36AF11B3D2C75002D217F /* GrouponClassReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AE21B3D2C75002D217F /* GrouponClassReusableView.m */; };
+		14B36AF21B3D2C75002D217F /* GrouponClassReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AE31B3D2C75002D217F /* GrouponClassReusableView.xib */; };
+		14B36AF31B3D2C75002D217F /* GrouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AE51B3D2C75002D217F /* GrouponView.m */; };
+		14B36AF41B3D2C75002D217F /* GrouponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AE61B3D2C75002D217F /* GrouponView.xib */; };
+		14B36AF51B3D2C75002D217F /* GrouponShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AE81B3D2C75002D217F /* GrouponShopView.m */; };
+		14B36AF61B3D2C75002D217F /* GrouponShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AE91B3D2C75002D217F /* GrouponShopView.xib */; };
+		14B36AF71B3D2C75002D217F /* GrouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AEB1B3D2C75002D217F /* GrouponCell.m */; };
+		14B36AF81B3D2C75002D217F /* GrouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B36AEC1B3D2C75002D217F /* GrouponCell.xib */; };
+		14B36AFB1B3D2CD6002D217F /* Groupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B36AFA1B3D2CD6002D217F /* Groupon.m */; };
 		14B4D3CA1A36CE4D00933A5A /* SGFocusImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D3C71A36CE4D00933A5A /* SGFocusImageFrame.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		14B4D3CB1A36CE4D00933A5A /* SGFocusImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D3C91A36CE4D00933A5A /* SGFocusImageItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		14B4D3D01A36D82300933A5A /* LifeReferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D3CE1A36D82200933A5A /* LifeReferView.m */; };
@@ -244,16 +269,6 @@
 		14EFC3951A899E8000AE881D /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3871A899E8000AE881D /* RSADataSigner.m */; };
 		14EFC3961A899E8000AE881D /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3891A899E8000AE881D /* RSADataVerifier.m */; };
 		14EFC3991A899F6700AE881D /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3981A899F6700AE881D /* Bill.m */; };
-		14EFC3BC1A89A66B00AE881D /* CommodityClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC39C1A89A66B00AE881D /* CommodityClassView.m */; };
-		14EFC3BD1A89A66B00AE881D /* CommodityClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC39D1A89A66B00AE881D /* CommodityClassView.xib */; };
-		14EFC3BE1A89A66B00AE881D /* CommodityClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC39F1A89A66B00AE881D /* CommodityClassCell.m */; };
-		14EFC3BF1A89A66B00AE881D /* CommodityClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC3A01A89A66B00AE881D /* CommodityClassCell.xib */; };
-		14EFC3C01A89A66B00AE881D /* CommodityClassReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3A21A89A66B00AE881D /* CommodityClassReusableView.m */; };
-		14EFC3C11A89A66B00AE881D /* CommodityClassReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC3A31A89A66B00AE881D /* CommodityClassReusableView.xib */; };
-		14EFC3C21A89A66B00AE881D /* CommodityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3A51A89A66B00AE881D /* CommodityView.m */; };
-		14EFC3C31A89A66B00AE881D /* CommodityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC3A61A89A66B00AE881D /* CommodityView.xib */; };
-		14EFC3C41A89A66B00AE881D /* CommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3A81A89A66B00AE881D /* CommodityCell.m */; };
-		14EFC3C51A89A66B00AE881D /* CommodityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC3A91A89A66B00AE881D /* CommodityCell.xib */; };
 		14EFC3C61A89A66B00AE881D /* CommodityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3AB1A89A66B00AE881D /* CommodityDetailView.m */; };
 		14EFC3C71A89A66B00AE881D /* CommodityDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EFC3AC1A89A66B00AE881D /* CommodityDetailView.xib */; };
 		14EFC3C81A89A66B00AE881D /* ShopCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC3AE1A89A66B00AE881D /* ShopCarView.m */; };
@@ -696,6 +711,44 @@
 		1495756E1A2CA2D100320CF8 /* PropertyPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyPageView.h; sourceTree = "<group>"; };
 		1495756F1A2CA2D100320CF8 /* PropertyPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyPageView.m; sourceTree = "<group>"; };
 		149575701A2CA2D100320CF8 /* PropertyPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyPageView.xib; sourceTree = "<group>"; };
+		14B36ABB1B3D283B002D217F /* CommodityClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassView.h; sourceTree = "<group>"; };
+		14B36ABC1B3D283B002D217F /* CommodityClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassView.m; sourceTree = "<group>"; };
+		14B36ABD1B3D283B002D217F /* CommodityClassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassView.xib; sourceTree = "<group>"; };
+		14B36ABE1B3D283B002D217F /* CommodityClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassCell.h; sourceTree = "<group>"; };
+		14B36ABF1B3D283B002D217F /* CommodityClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassCell.m; sourceTree = "<group>"; };
+		14B36AC01B3D283B002D217F /* CommodityClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassCell.xib; sourceTree = "<group>"; };
+		14B36AC11B3D283B002D217F /* CommodityClassReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassReusableView.h; sourceTree = "<group>"; };
+		14B36AC21B3D283B002D217F /* CommodityClassReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassReusableView.m; sourceTree = "<group>"; };
+		14B36AC31B3D283B002D217F /* CommodityClassReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassReusableView.xib; sourceTree = "<group>"; };
+		14B36AC41B3D283B002D217F /* CommodityFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityFooterView.h; sourceTree = "<group>"; };
+		14B36AC51B3D283B002D217F /* CommodityFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityFooterView.m; sourceTree = "<group>"; };
+		14B36AC61B3D283B002D217F /* CommodityFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityFooterView.xib; sourceTree = "<group>"; };
+		14B36AC71B3D283B002D217F /* CommodityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityView.h; sourceTree = "<group>"; };
+		14B36AC81B3D283B002D217F /* CommodityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityView.m; sourceTree = "<group>"; };
+		14B36AC91B3D283B002D217F /* CommodityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityView.xib; sourceTree = "<group>"; };
+		14B36ACA1B3D283B002D217F /* CommodityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityCell.h; sourceTree = "<group>"; };
+		14B36ACB1B3D283B002D217F /* CommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityCell.m; sourceTree = "<group>"; };
+		14B36ACC1B3D283B002D217F /* CommodityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityCell.xib; sourceTree = "<group>"; };
+		14B36ADB1B3D2C75002D217F /* GrouponClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponClassView.h; sourceTree = "<group>"; };
+		14B36ADC1B3D2C75002D217F /* GrouponClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponClassView.m; sourceTree = "<group>"; };
+		14B36ADD1B3D2C75002D217F /* GrouponClassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponClassView.xib; sourceTree = "<group>"; };
+		14B36ADE1B3D2C75002D217F /* GrouponClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponClassCell.h; sourceTree = "<group>"; };
+		14B36ADF1B3D2C75002D217F /* GrouponClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponClassCell.m; sourceTree = "<group>"; };
+		14B36AE01B3D2C75002D217F /* GrouponClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponClassCell.xib; sourceTree = "<group>"; };
+		14B36AE11B3D2C75002D217F /* GrouponClassReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponClassReusableView.h; sourceTree = "<group>"; };
+		14B36AE21B3D2C75002D217F /* GrouponClassReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponClassReusableView.m; sourceTree = "<group>"; };
+		14B36AE31B3D2C75002D217F /* GrouponClassReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponClassReusableView.xib; sourceTree = "<group>"; };
+		14B36AE41B3D2C75002D217F /* GrouponView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponView.h; sourceTree = "<group>"; };
+		14B36AE51B3D2C75002D217F /* GrouponView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponView.m; sourceTree = "<group>"; };
+		14B36AE61B3D2C75002D217F /* GrouponView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponView.xib; sourceTree = "<group>"; };
+		14B36AE71B3D2C75002D217F /* GrouponShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponShopView.h; sourceTree = "<group>"; };
+		14B36AE81B3D2C75002D217F /* GrouponShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponShopView.m; sourceTree = "<group>"; };
+		14B36AE91B3D2C75002D217F /* GrouponShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponShopView.xib; sourceTree = "<group>"; };
+		14B36AEA1B3D2C75002D217F /* GrouponCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrouponCell.h; sourceTree = "<group>"; };
+		14B36AEB1B3D2C75002D217F /* GrouponCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponCell.m; sourceTree = "<group>"; };
+		14B36AEC1B3D2C75002D217F /* GrouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrouponCell.xib; sourceTree = "<group>"; };
+		14B36AF91B3D2CD6002D217F /* Groupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Groupon.h; sourceTree = "<group>"; };
+		14B36AFA1B3D2CD6002D217F /* Groupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Groupon.m; sourceTree = "<group>"; };
 		14B4D3C61A36CE4D00933A5A /* SGFocusImageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFocusImageFrame.h; sourceTree = "<group>"; };
 		14B4D3C71A36CE4D00933A5A /* SGFocusImageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFocusImageFrame.m; sourceTree = "<group>"; };
 		14B4D3C81A36CE4D00933A5A /* SGFocusImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFocusImageItem.h; sourceTree = "<group>"; };
@@ -995,21 +1048,6 @@
 		14EFC3891A899E8000AE881D /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
 		14EFC3971A899F6700AE881D /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
 		14EFC3981A899F6700AE881D /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
-		14EFC39B1A89A66B00AE881D /* CommodityClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassView.h; sourceTree = "<group>"; };
-		14EFC39C1A89A66B00AE881D /* CommodityClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassView.m; sourceTree = "<group>"; };
-		14EFC39D1A89A66B00AE881D /* CommodityClassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassView.xib; sourceTree = "<group>"; };
-		14EFC39E1A89A66B00AE881D /* CommodityClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassCell.h; sourceTree = "<group>"; };
-		14EFC39F1A89A66B00AE881D /* CommodityClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassCell.m; sourceTree = "<group>"; };
-		14EFC3A01A89A66B00AE881D /* CommodityClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassCell.xib; sourceTree = "<group>"; };
-		14EFC3A11A89A66B00AE881D /* CommodityClassReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityClassReusableView.h; sourceTree = "<group>"; };
-		14EFC3A21A89A66B00AE881D /* CommodityClassReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityClassReusableView.m; sourceTree = "<group>"; };
-		14EFC3A31A89A66B00AE881D /* CommodityClassReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityClassReusableView.xib; sourceTree = "<group>"; };
-		14EFC3A41A89A66B00AE881D /* CommodityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityView.h; sourceTree = "<group>"; };
-		14EFC3A51A89A66B00AE881D /* CommodityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityView.m; sourceTree = "<group>"; };
-		14EFC3A61A89A66B00AE881D /* CommodityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityView.xib; sourceTree = "<group>"; };
-		14EFC3A71A89A66B00AE881D /* CommodityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityCell.h; sourceTree = "<group>"; };
-		14EFC3A81A89A66B00AE881D /* CommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityCell.m; sourceTree = "<group>"; };
-		14EFC3A91A89A66B00AE881D /* CommodityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityCell.xib; sourceTree = "<group>"; };
 		14EFC3AA1A89A66B00AE881D /* CommodityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityDetailView.h; sourceTree = "<group>"; };
 		14EFC3AB1A89A66B00AE881D /* CommodityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityDetailView.m; sourceTree = "<group>"; };
 		14EFC3AC1A89A66B00AE881D /* CommodityDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityDetailView.xib; sourceTree = "<group>"; };
@@ -1650,6 +1688,8 @@
 				14EFC4351A89ADB900AE881D /* OrderCommodityVO.m */,
 				145841651AA1AF0F000B07AB /* MyServiceOrder.h */,
 				145841661AA1AF0F000B07AB /* MyServiceOrder.m */,
+				14B36AF91B3D2CD6002D217F /* Groupon.h */,
+				14B36AFA1B3D2CD6002D217F /* Groupon.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1746,6 +1786,31 @@
 			name = PropertyPage;
 			sourceTree = "<group>";
 		};
+		14B36ADA1B3D2C61002D217F /* GrouponPay */ = {
+			isa = PBXGroup;
+			children = (
+				14B36ADB1B3D2C75002D217F /* GrouponClassView.h */,
+				14B36ADC1B3D2C75002D217F /* GrouponClassView.m */,
+				14B36ADD1B3D2C75002D217F /* GrouponClassView.xib */,
+				14B36ADE1B3D2C75002D217F /* GrouponClassCell.h */,
+				14B36ADF1B3D2C75002D217F /* GrouponClassCell.m */,
+				14B36AE01B3D2C75002D217F /* GrouponClassCell.xib */,
+				14B36AE11B3D2C75002D217F /* GrouponClassReusableView.h */,
+				14B36AE21B3D2C75002D217F /* GrouponClassReusableView.m */,
+				14B36AE31B3D2C75002D217F /* GrouponClassReusableView.xib */,
+				14B36AE41B3D2C75002D217F /* GrouponView.h */,
+				14B36AE51B3D2C75002D217F /* GrouponView.m */,
+				14B36AE61B3D2C75002D217F /* GrouponView.xib */,
+				14B36AE71B3D2C75002D217F /* GrouponShopView.h */,
+				14B36AE81B3D2C75002D217F /* GrouponShopView.m */,
+				14B36AE91B3D2C75002D217F /* GrouponShopView.xib */,
+				14B36AEA1B3D2C75002D217F /* GrouponCell.h */,
+				14B36AEB1B3D2C75002D217F /* GrouponCell.m */,
+				14B36AEC1B3D2C75002D217F /* GrouponCell.xib */,
+			);
+			name = GrouponPay;
+			sourceTree = "<group>";
+		};
 		14B4D3C51A36CE4D00933A5A /* SGFocusImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1835,6 +1900,7 @@
 		14B641B51A2D423C00C350A0 /* LifePage */ = {
 			isa = PBXGroup;
 			children = (
+				14B36ADA1B3D2C61002D217F /* GrouponPay */,
 				14EFC39A1A89A65300AE881D /* Shop */,
 				14B641B71A2D42AC00C350A0 /* LifePageView.h */,
 				14B641B81A2D42AC00C350A0 /* LifePageView.m */,
@@ -2066,21 +2132,24 @@
 		14EFC39A1A89A65300AE881D /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				14EFC39B1A89A66B00AE881D /* CommodityClassView.h */,
-				14EFC39C1A89A66B00AE881D /* CommodityClassView.m */,
-				14EFC39D1A89A66B00AE881D /* CommodityClassView.xib */,
-				14EFC39E1A89A66B00AE881D /* CommodityClassCell.h */,
-				14EFC39F1A89A66B00AE881D /* CommodityClassCell.m */,
-				14EFC3A01A89A66B00AE881D /* CommodityClassCell.xib */,
-				14EFC3A11A89A66B00AE881D /* CommodityClassReusableView.h */,
-				14EFC3A21A89A66B00AE881D /* CommodityClassReusableView.m */,
-				14EFC3A31A89A66B00AE881D /* CommodityClassReusableView.xib */,
-				14EFC3A41A89A66B00AE881D /* CommodityView.h */,
-				14EFC3A51A89A66B00AE881D /* CommodityView.m */,
-				14EFC3A61A89A66B00AE881D /* CommodityView.xib */,
-				14EFC3A71A89A66B00AE881D /* CommodityCell.h */,
-				14EFC3A81A89A66B00AE881D /* CommodityCell.m */,
-				14EFC3A91A89A66B00AE881D /* CommodityCell.xib */,
+				14B36ABB1B3D283B002D217F /* CommodityClassView.h */,
+				14B36ABC1B3D283B002D217F /* CommodityClassView.m */,
+				14B36ABD1B3D283B002D217F /* CommodityClassView.xib */,
+				14B36ABE1B3D283B002D217F /* CommodityClassCell.h */,
+				14B36ABF1B3D283B002D217F /* CommodityClassCell.m */,
+				14B36AC01B3D283B002D217F /* CommodityClassCell.xib */,
+				14B36AC11B3D283B002D217F /* CommodityClassReusableView.h */,
+				14B36AC21B3D283B002D217F /* CommodityClassReusableView.m */,
+				14B36AC31B3D283B002D217F /* CommodityClassReusableView.xib */,
+				14B36AC41B3D283B002D217F /* CommodityFooterView.h */,
+				14B36AC51B3D283B002D217F /* CommodityFooterView.m */,
+				14B36AC61B3D283B002D217F /* CommodityFooterView.xib */,
+				14B36AC71B3D283B002D217F /* CommodityView.h */,
+				14B36AC81B3D283B002D217F /* CommodityView.m */,
+				14B36AC91B3D283B002D217F /* CommodityView.xib */,
+				14B36ACA1B3D283B002D217F /* CommodityCell.h */,
+				14B36ACB1B3D283B002D217F /* CommodityCell.m */,
+				14B36ACC1B3D283B002D217F /* CommodityCell.xib */,
 				14EFC3AA1A89A66B00AE881D /* CommodityDetailView.h */,
 				14EFC3AB1A89A66B00AE881D /* CommodityDetailView.m */,
 				14EFC3AC1A89A66B00AE881D /* CommodityDetailView.xib */,
@@ -2936,6 +3005,8 @@
 			files = (
 				14B4D4631A3C179100933A5A /* MonthlyView.xib in Resources */,
 				14B641CA1A2D9E0200C350A0 /* TransitionView.xib in Resources */,
+				14B36AD61B3D283B002D217F /* CommodityView.xib in Resources */,
+				14B36AF21B3D2C75002D217F /* GrouponClassReusableView.xib in Resources */,
 				14C117871A31E2E8009CAC7E /* ExpressHistoryView.xib in Resources */,
 				14FDB9A31A26C94E006EFFCC /* LoadingCell.xib in Resources */,
 				14FDB7A31A26B6E3006EFFCC /* LoginView.xib in Resources */,
@@ -2952,7 +3023,6 @@
 				14EFC4021A89A6CD00AE881D /* cb_box_on.png in Resources */,
 				14C6B47A1A6CA05F004E4F10 /* VisitorView.xib in Resources */,
 				14B4D3DF1A37262700933A5A /* LifeReferFooterReusableView.xib in Resources */,
-				14EFC3BD1A89A66B00AE881D /* CommodityClassView.xib in Resources */,
 				14EFC40F1A89A6CD00AE881D /* cb_green_on@2x.png in Resources */,
 				14EFC4151A89A6CD00AE881D /* cd_my_off@2x.png in Resources */,
 				14B4D4451A3A9CE900933A5A /* RepairFinishCell.xib in Resources */,
@@ -2965,8 +3035,6 @@
 				146E22851A45B5B9003EB640 /* PaymentMonthDetailView.xib in Resources */,
 				14EFC3C71A89A66B00AE881D /* CommodityDetailView.xib in Resources */,
 				140225C31A46FDC300D811B8 /* PublishTradeView.xib in Resources */,
-				14EFC3BF1A89A66B00AE881D /* CommodityClassCell.xib in Resources */,
-				14EFC3C31A89A66B00AE881D /* CommodityView.xib in Resources */,
 				1406CFF61A48F78D00CF3FEE /* InviteView.xib in Resources */,
 				14FDB44B1A25B73A006EFFCC /* LaunchScreen.xib in Resources */,
 				14EFC4041A89A6CD00AE881D /* cb_dark_off.png in Resources */,
@@ -2980,6 +3048,7 @@
 				14B4D3E91A37418400933A5A /* ConvenienceTypeView.xib in Resources */,
 				14EFC4141A89A6CD00AE881D /* cd_my_off.png in Resources */,
 				14C117C11A359C7B009CAC7E /* AddRepairView.xib in Resources */,
+				14B36AEE1B3D2C75002D217F /* GrouponClassView.xib in Resources */,
 				142D9E0D1A3FD68D00EF59A1 /* PushGatePassView.xib in Resources */,
 				14FDB4481A25B73A006EFFCC /* Images.xcassets in Resources */,
 				14753FC91A4D41AB002533E6 /* PopularityView.xib in Resources */,
@@ -2987,7 +3056,6 @@
 				14EFC4011A89A6CD00AE881D /* cb_box_off@2x.png in Resources */,
 				149575721A2CA2D100320CF8 /* PropertyPageView.xib in Resources */,
 				14B4D42C1A39D04A00933A5A /* RepairBasicCell.xib in Resources */,
-				14EFC3C11A89A66B00AE881D /* CommodityClassReusableView.xib in Resources */,
 				142D9E1B1A401AA000EF59A1 /* ServiceOrderView.xib in Resources */,
 				14C1177B1A31633E009CAC7E /* ExpressCell.xib in Resources */,
 				14B4D3F41A37D8A900933A5A /* ConvenienceTableView.xib in Resources */,
@@ -3002,6 +3070,7 @@
 				14B4D46B1A3C26BD00933A5A /* MonthlyCell.xib in Resources */,
 				1435427C1A2F11C900A8BBB7 /* CallServiceCell.xib in Resources */,
 				1406D00D1A49185000CF3FEE /* MyHouseUserView.xib in Resources */,
+				14B36AF01B3D2C75002D217F /* GrouponClassCell.xib in Resources */,
 				142D9E381A41B55700EF59A1 /* CircleOfFriendsView.xib in Resources */,
 				14EFC40D1A89A6CD00AE881D /* cb_green_off@2x.png in Resources */,
 				14E3A06A1A276C92009D0EB0 /* RegisterStep2View.xib in Resources */,
@@ -3011,11 +3080,14 @@
 				142D9E2E1A408AC400EF59A1 /* ActivityDetailView.xib in Resources */,
 				144A1C061A302EE400E01E2B /* mapapi.bundle in Resources */,
 				14B4D3D91A36DCB500933A5A /* LifeReferCell.xib in Resources */,
+				14B36AF41B3D2C75002D217F /* GrouponView.xib in Resources */,
+				14B36ACE1B3D283B002D217F /* CommodityClassView.xib in Resources */,
 				145841641AA19995000B07AB /* MyServiceOrderCell.xib in Resources */,
 				14B4D47A1A3D362200933A5A /* SuitWorkTableView.xib in Resources */,
 				14EFC4291A89A72200AE881D /* OrderCommodityCell.xib in Resources */,
 				14C117741A3151A6009CAC7E /* ExpressView.xib in Resources */,
 				142435C51A47A17900896B6F /* SignInView.xib in Resources */,
+				14B36AD81B3D283B002D217F /* CommodityCell.xib in Resources */,
 				14EFC40B1A89A6CD00AE881D /* cb_glossy_on@2x.png in Resources */,
 				14EFC3C91A89A66B00AE881D /* ShopCarView.xib in Resources */,
 				14B641DD1A2DFA7D00C350A0 /* NoticeOldCell.xib in Resources */,
@@ -3029,14 +3101,18 @@
 				14EFC4161A89A6CD00AE881D /* cd_my_on.png in Resources */,
 				14EFC3CF1A89A66B00AE881D /* ConfirmationView.xib in Resources */,
 				14E3A06F1A276F9C009D0EB0 /* RegisterStep3View.xib in Resources */,
+				14B36AF81B3D2C75002D217F /* GrouponCell.xib in Resources */,
 				1458415E1AA196FA000B07AB /* MyServiceOrderView.xib in Resources */,
 				14F801491A46AE9F00DAD296 /* TradeListCell.xib in Resources */,
 				144A1C031A302E4600E01E2B /* IQKeyboardManager.bundle in Resources */,
 				14EFC4121A89A6CD00AE881D /* cb_mono_on.png in Resources */,
 				14B4D3FA1A37D91700933A5A /* ConvenienceCell.xib in Resources */,
+				14B36AD41B3D283B002D217F /* CommodityFooterView.xib in Resources */,
 				14EFC3241A899DCB00AE881D /* BillCell.xib in Resources */,
+				14B36AF61B3D2C75002D217F /* GrouponShopView.xib in Resources */,
 				14C117CF1A35F452009CAC7E /* RepairImageCell.xib in Resources */,
 				14CCEE061A3696CE00ABBE7F /* RepairTableCell.xib in Resources */,
+				14B36AD21B3D283B002D217F /* CommodityClassReusableView.xib in Resources */,
 				14EFC4111A89A6CD00AE881D /* cb_mono_off@2x.png in Resources */,
 				14E8F4131A2D5CE900017CA5 /* MyPageView.xib in Resources */,
 				14EFC4131A89A6CD00AE881D /* cb_mono_on@2x.png in Resources */,
@@ -3062,6 +3138,7 @@
 				14EFC4081A89A6CD00AE881D /* cb_glossy_off.png in Resources */,
 				142D9E501A42AF8600EF59A1 /* CircleOfFriendsReplyCell.xib in Resources */,
 				148AD7DB1A3F23AC00290203 /* BorrowRecordCell.xib in Resources */,
+				14B36AD01B3D283B002D217F /* CommodityClassCell.xib in Resources */,
 				1406CFF11A4859CF00CF3FEE /* ModifyUserInfoView.xib in Resources */,
 				14B812FA1A2F55D500506CD1 /* CallServiceReusable.xib in Resources */,
 				148AD7D11A3EC5F700290203 /* BorrowGoodFromView.xib in Resources */,
@@ -3069,7 +3146,6 @@
 				14EFC3CB1A89A66B00AE881D /* ShopCarCell.xib in Resources */,
 				14EFC3221A899DCB00AE881D /* FeeTableView.xib in Resources */,
 				14B4D4A31A3DC92C00933A5A /* SuitResutCell.xib in Resources */,
-				14EFC3C51A89A66B00AE881D /* CommodityCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3121,7 +3197,6 @@
 				146E227B1A4517CC003EB640 /* Payment.m in Sources */,
 				14D3C07D1A2819EA003E650A /* UserHouse.m in Sources */,
 				1469FD6B1A270E10002685A0 /* PrintObject.m in Sources */,
-				14EFC3C21A89A66B00AE881D /* CommodityView.m in Sources */,
 				14EFC3DE1A89A69E00AE881D /* CommodityPropery.m in Sources */,
 				14B4D4A21A3DC92C00933A5A /* SuitResutCell.m in Sources */,
 				14FDB9BB1A26C94F006EFFCC /* MWGridCell.m in Sources */,
@@ -3145,6 +3220,7 @@
 				14B4D4181A39253700933A5A /* ShopInfoCell.m in Sources */,
 				142D9E161A4009FB00EF59A1 /* PassInfo.m in Sources */,
 				14EFC43E1A89B03B00AE881D /* Jastor.m in Sources */,
+				14B36AF51B3D2C75002D217F /* GrouponShopView.m in Sources */,
 				14FDB9D71A26C94F006EFFCC /* SDWebImageDownloader.m in Sources */,
 				144A1AEA1A2FFE9500E01E2B /* GoodBorrowCell.m in Sources */,
 				14FDB9CB1A26C94F006EFFCC /* PSTCollectionViewUpdateItem.m in Sources */,
@@ -3155,9 +3231,11 @@
 				14FDB7A21A26B6E3006EFFCC /* LoginView.mm in Sources */,
 				14FDB9AB1A26C94E006EFFCC /* NSString+URLEncoding.m in Sources */,
 				14B641C11A2D691A00C350A0 /* SettingPageView.m in Sources */,
+				14B36AD71B3D283B002D217F /* CommodityCell.m in Sources */,
 				14B4D4751A3D260200933A5A /* SuitType.m in Sources */,
 				14C117BA1A357F60009CAC7E /* CircleOfFriendsImgCell.m in Sources */,
 				14EFC3D01A89A66B00AE881D /* ConfirmationCell.m in Sources */,
+				14B36AF71B3D2C75002D217F /* GrouponCell.m in Sources */,
 				1469FD651A270DF4002685A0 /* UserModel.m in Sources */,
 				14FDB9DB1A26C94F006EFFCC /* UIButton+WebCache.m in Sources */,
 				14B4D3E81A37418400933A5A /* ConvenienceTypeView.m in Sources */,
@@ -3208,12 +3286,14 @@
 				142D9E2D1A408AC400EF59A1 /* ActivityDetailView.m in Sources */,
 				14FDB9BF1A26C94F006EFFCC /* MWTapDetectingImageView.m in Sources */,
 				1406D0191A494F5500CF3FEE /* ChangeHouseView.m in Sources */,
+				14B36AED1B3D2C75002D217F /* GrouponClassView.m in Sources */,
 				14FDB9731A26C94E006EFFCC /* UIImageView+AFNetworking.m in Sources */,
 				14F801481A46AE9F00DAD296 /* TradeListCell.m in Sources */,
 				1469FD6A1A270E10002685A0 /* Tool.m in Sources */,
 				14B4D3D01A36D82300933A5A /* LifeReferView.m in Sources */,
 				14FDB9A11A26C94E006EFFCC /* ImageStore.m in Sources */,
 				14FDB9CF1A26C94F006EFFCC /* PSTGridLayoutSection.m in Sources */,
+				14B36AFB1B3D2CD6002D217F /* Groupon.m in Sources */,
 				1458415D1AA196FA000B07AB /* MyServiceOrderView.m in Sources */,
 				14E8F4121A2D5CE900017CA5 /* MyPageView.m in Sources */,
 				14FDB9CA1A26C94F006EFFCC /* PSTCollectionViewLayout.m in Sources */,
@@ -3222,8 +3302,8 @@
 				14B4D4321A39DAC000933A5A /* RepairDispatch.m in Sources */,
 				142D9E121A40072700EF59A1 /* GatePassInfoCell.m in Sources */,
 				14B4D46A1A3C26BD00933A5A /* MonthlyCell.m in Sources */,
-				14EFC3BC1A89A66B00AE881D /* CommodityClassView.m in Sources */,
 				14FDB99A1A26C94E006EFFCC /* EGOCache.m in Sources */,
+				14B36AF11B3D2C75002D217F /* GrouponClassReusableView.m in Sources */,
 				14B4D3EC1A3744D500933A5A /* ShopType.m in Sources */,
 				14B4D44A1A3ACBE100933A5A /* Unit.m in Sources */,
 				14B4D4661A3C24A900933A5A /* Monthly.m in Sources */,
@@ -3236,6 +3316,7 @@
 				14FDB9BC1A26C94F006EFFCC /* MWGridViewController.m in Sources */,
 				14EFC3DC1A89A69E00AE881D /* CommodityClass.m in Sources */,
 				14FDB9661A26C94E006EFFCC /* NSData+Base64.m in Sources */,
+				14B36AD31B3D283B002D217F /* CommodityFooterView.m in Sources */,
 				14FDB9831A26C94E006EFFCC /* AMRatingControl.m in Sources */,
 				1406CFE91A48043C00CF3FEE /* StoreMapPointView.m in Sources */,
 				14FDB9851A26C94E006EFFCC /* ASIAuthenticationDialog.m in Sources */,
@@ -3292,6 +3373,7 @@
 				1406D0041A490AD000CF3FEE /* ReleasepermitCell.m in Sources */,
 				14EFC42E1A89A8B800AE881D /* MyOrder.m in Sources */,
 				14C117861A31E2E8009CAC7E /* ExpressHistoryView.m in Sources */,
+				14B36AD51B3D283B002D217F /* CommodityView.m in Sources */,
 				14FDB99D1A26C94E006EFFCC /* EGOImageLoader.m in Sources */,
 				142D9E371A41B55700EF59A1 /* CircleOfFriendsView.m in Sources */,
 				142D9E3C1A41CB9200EF59A1 /* TopicFull.m in Sources */,
@@ -3315,6 +3397,7 @@
 				14EFC31F1A899DCB00AE881D /* PayFeeView.m in Sources */,
 				14FDB9CE1A26C94F006EFFCC /* PSTGridLayoutRow.m in Sources */,
 				144A1AE51A2FFDD900E01E2B /* BorrowGood.m in Sources */,
+				14B36ACF1B3D283B002D217F /* CommodityClassCell.m in Sources */,
 				14FDB9CC1A26C94F006EFFCC /* PSTGridLayoutInfo.m in Sources */,
 				14FDB9DC1A26C94F006EFFCC /* UIImage+GIF.m in Sources */,
 				14FDB9E71A26C94F006EFFCC /* RMMapper.m in Sources */,
@@ -3324,6 +3407,7 @@
 				14FDB98B1A26C94E006EFFCC /* ASIInputStream.m in Sources */,
 				14FDB9C61A26C94F006EFFCC /* PSTCollectionViewController.m in Sources */,
 				14EFC3941A899E8000AE881D /* openssl_wrapper.m in Sources */,
+				14B36AD11B3D283B002D217F /* CommodityClassReusableView.m in Sources */,
 				14FDB99B1A26C94E006EFFCC /* EGOImageButton.m in Sources */,
 				14B4D42B1A39D04A00933A5A /* RepairBasicCell.m in Sources */,
 				1406CFFF1A49038000CF3FEE /* ReleasepermitView.m in Sources */,
@@ -3333,16 +3417,14 @@
 				14FDB98A1A26C94E006EFFCC /* ASIHTTPRequest.m in Sources */,
 				14FDB9C91A26C94F006EFFCC /* PSTCollectionViewItemKey.m in Sources */,
 				14B4D3F91A37D91700933A5A /* ConvenienceCell.m in Sources */,
-				14EFC3C41A89A66B00AE881D /* CommodityCell.m in Sources */,
 				14B4D49E1A3DC79E00933A5A /* SuitResult.m in Sources */,
 				14FDB9E31A26C94F006EFFCC /* NSString+STRegex.m in Sources */,
-				14EFC3C01A89A66B00AE881D /* CommodityClassReusableView.m in Sources */,
 				14EFC4371A89ADB900AE881D /* OrderShopVO.m in Sources */,
 				140225C21A46FDC300D811B8 /* PublishTradeView.m in Sources */,
 				14B641DC1A2DFA7D00C350A0 /* NoticeOldCell.m in Sources */,
 				14B4D3CA1A36CE4D00933A5A /* SGFocusImageFrame.m in Sources */,
-				14EFC3BE1A89A66B00AE881D /* CommodityClassCell.m in Sources */,
 				14D3C0A71A2874EB003E650A /* Community.m in Sources */,
+				14B36AEF1B3D2C75002D217F /* GrouponClassCell.m in Sources */,
 				14C117CE1A35F452009CAC7E /* RepairImageCell.m in Sources */,
 				14FDB9A81A26C94E006EFFCC /* NSDate+Extensions.m in Sources */,
 				1406D0151A491BD600CF3FEE /* HouseUser.m in Sources */,
@@ -3353,6 +3435,7 @@
 				1406CFE21A47FFB100CF3FEE /* ConvenienceDetailView.m in Sources */,
 				1435426D1A2EA21800A8BBB7 /* Notice.m in Sources */,
 				14EFC3911A899E8000AE881D /* DataVerifier.m in Sources */,
+				14B36AF31B3D2C75002D217F /* GrouponView.m in Sources */,
 				14FDB9681A26C94E006EFFCC /* NSString+Base64.m in Sources */,
 				14EFC42F1A89A8B800AE881D /* MyOrderCommodity.m in Sources */,
 				14B4D3D41A36DB9600933A5A /* LifeRefer.m in Sources */,
@@ -3366,6 +3449,7 @@
 				14FDB9BA1A26C94F006EFFCC /* MWCaptionView.m in Sources */,
 				14FDB9D41A26C94F006EFFCC /* SDImageCache.m in Sources */,
 				142435C41A47A17900896B6F /* SignInView.m in Sources */,
+				14B36ACD1B3D283B002D217F /* CommodityClassView.m in Sources */,
 				14C1178B1A31E3B9009CAC7E /* ExpressHistoryCell.m in Sources */,
 				14FDB9721A26C94E006EFFCC /* AFXMLRequestOperation.m in Sources */,
 				14FDB9AE1A26C94E006EFFCC /* UIImage+resize.m in Sources */,

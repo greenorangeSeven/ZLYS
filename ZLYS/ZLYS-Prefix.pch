@@ -38,8 +38,8 @@
 
 #define Appkey @"10000001"
 #define AppSecret @"Hr54hiz7"
-
-//#define api_base_url @"http://192.168.1.104:8080/zlys_api/"
+//
+//#define api_base_url @"http://192.168.1.102:8080/zlys_api/"
 #define api_base_url @"http://115.236.59.15:80/zlys_api/"
 //登录接口
 #define api_login @"regUser/login.htm"
@@ -181,6 +181,13 @@
 #define api_findOrderByPage @"order/findOrderByPage.htm"
 //获取所有订单状态
 #define api_findAllOrderState @"order/findAllOrderState.htm"
+
+//分页查询商品信息(全城特价)
+#define api_findSaleCommodityByPage @"commodity/findSaleCommodityByPage.htm"
+
+//查询商家类型列表接口
+#define api_findShopTypeList @"shop/findShopTypeList.htm"
+
 //订单支付成功状态码
 #define ORDER_PAY_OK @"9000"
 

@@ -246,4 +246,10 @@
 
 + (id) readJsonToObj:(NSString *)json andObjClass:(Class)objClass;
 
+//将json字典转换成对象
++ (id)readJsonDicToObj:(NSDictionary *)jsonDic andObjClass:(Class)objClass;
+
+//将json集合转换成对象集合
++ (NSArray *)readJsonToObjArray:(NSArray *)jsonArray andObjClass:(Class)objClass;
+
 @end
